@@ -20,8 +20,10 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: {{ template "fullname" . }}
-          servicePort: 80
+          service:
+            name: {{ template "fullname" . }}
+            port:
+              number: 80
         path: /
         pathType: ImplementationSpecific
 {{- end}}
