@@ -20,5 +20,7 @@ spec:
         env: staging
   - name: production
     clusterGroup: production
-  - name: test
-    clusterGroup: test
+  - name: test    
+    clusterSelector:
+      matchLabels:
+        env: test
